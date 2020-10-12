@@ -1,0 +1,67 @@
+/////////////////////
+////   access   /////
+/////////////////////
+
+.access{
+  height: 757px;
+  background: linear-gradient(to bottom, $silver 0px, $silver 291px, #D0C5BA 292px, #D0C5BA 687px, $silver 688px, $silver 757px);
+  padding-left: 8%;
+  padding-top: 261px;
+  @include tab{
+    height: 710px;
+    background: linear-gradient(to bottom, $silver 0px, $silver 364px,#D0C5BA 365px, #D0C5BA  647px, $silver 648px, $silver 710px);
+    padding-top: 60px;
+    padding-left: 0;
+  }
+}
+
+.access-wrap{
+  height: 396px;
+  display: flex;
+  position: relative;
+  @include tab{
+    display: flex;
+    /*mapを上に並べることに苦戦しました。
+    なぜか、column,column-reverseも効かなくて、(.access-wrap__descがマップの下にかぶってしまいました。)
+    .access-wrap__descを移動することにしました。
+    なぜ、flex-directionがかぶってしまうのか教えていただきたいです。*/
+    flex-direction: column;
+  }
+  &__desc{
+    @include tab{
+      transform: translateY(170px);
+      padding-left: 20px;
+    }
+    &__title{
+      color: #00000038;
+      font-size: 2.4rem;
+      letter-spacing: 2.4px;
+      font-weight: bold;
+      padding-top: 101px;
+      padding-bottom: 30px;
+    }
+    &__info{
+      color: $white;
+      font-size: 1.6rem;
+      letter-spacing: 1.6px;
+      height: 138px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  &__map{
+    position: absolute;
+    right: 0px;
+    @include tab{
+      width: 100%;
+      height: 238px;
+    }
+  }
+}
+.title{
+  @include tab{
+    padding-bottom: 50px;
+    padding-left: 20px;
+  }
+}

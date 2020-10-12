@@ -1,0 +1,87 @@
+/////////////////////////
+/////    footer    /////
+////////////////////////
+
+footer{
+  height: 342px;
+  background-color: $white;
+  padding-top: 248px;
+  padding-left: 8%;
+  padding-right: 8.8%;
+  
+  line-height: 3.2rem;
+  @include tab{
+    height: 260px;
+    padding-top: 0;
+    padding-left: 5.3%;
+    padding-right: 5.3%;
+  }
+  
+  p{
+    color: #7070704D;
+    font-size: 3.2rem;
+    letter-spacing: 3.2px;
+    padding-right: 2%;
+    @include tab{
+      font-size: 1.8rem;
+      letter-spacing: 1.8px;
+    }
+  }
+}
+.footer-info{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom:60px;
+  @include tab{
+    display:flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.icon{
+  /*heightではできなかった。*/
+  font-size: 19px;
+  
+}
+.fa-twitter{
+  padding-right: 9px;
+  // @include tab{
+  //   margin-left: 120px
+  // }
+}
+
+.footer-wrap{
+  display: flex;
+  width: 335px;
+  @include tab{
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+button{
+  width: 184px;
+  height: 37px;
+  background-color: $white;
+  color: $gray;
+  font-size: 1.8rem;
+  letter-spacing: 1.8px;
+  border: 1px $gray solid;
+  @include tab{
+    margin: 0 auto 62px;
+  }
+}
+button:hover{
+  cursor: pointer;
+}
+
+.border{
+  width: 99%;
+  height: 1px;
+  background-color: #70707036;
+  margin: 0 auto 83.5px;
+  @include tab{
+    margin-top: 63px;
+    margin-bottom: 60px;
+  }
+}

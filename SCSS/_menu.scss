@@ -1,0 +1,87 @@
+////////////////////
+////    menu   ////
+///////////////////
+
+.menu{
+   height: 921px;
+   background-color: #fff;
+   padding-left: 8%;
+   padding-top: 261px;
+   @include tab{
+     /*height:1844pxではなぜかはみ出してしまって原因がわからなかったので、のばしました。*/
+     height: 1963px;
+     padding-left: 5%;
+     padding-right: 5%;
+     padding-top: 60px;
+   }
+   @include sp{
+     padding-left: 20px;
+     padding-right: 20px;
+   }
+}
+
+.menu-wrap{
+  display: flex;
+  width: 100%;
+  padding-right: 8%;
+  justify-content: space-between;
+  @include tab{
+    flex-direction: column;
+    padding-top: 50px;
+  }
+}
+.menu-item{
+  width: 21%; /*274px*/
+  height: 555px;
+  position:relative;
+  @include tab{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  &__img{
+    width: 274px;
+    @include tab{
+      width: 335px;
+    }
+  }
+  &__title{
+    font-size: 3rem;
+    color: $black;
+    letter-spacing: 3px;
+    padding-top: 37px;
+    padding-bottom: 34px;
+    text-align: center;
+    @include tab{
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-align: left;
+      padding-left: 33px;
+    }
+  }
+  &__desc{
+    font-size: 1.6rem;
+    letter-spacing: 1.6px;
+    padding-right:10px;
+    padding-left: 11px;
+    line-height: 1.9rem;
+    @include tab{
+      padding-left: 33px;
+      // padding-bottom: 26px;
+    }
+  }
+  &__price{
+    font-size: 1.6rem;
+    letter-spacing: 1.6px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include tab{
+      // margin-bottom: 63px;
+      // position: absolute;
+      // bottom:0;
+      // right:0;
+      padding-top: 26px;
+    }
+  }
+}

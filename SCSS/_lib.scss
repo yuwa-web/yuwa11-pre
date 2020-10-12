@@ -1,0 +1,59 @@
+/////////////////////
+/////   変数    ///// 
+/////////////////////
+
+
+$black: #000000;
+$gray: #707070;
+$white: #FFFFFF;
+$silver: #A193861F;
+
+@mixin pc {
+  @media screen and (min-width: 960px){
+    @content;
+  }
+}
+
+@mixin tab{
+  @media screen and (max-width: 959px){
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: 600px){
+    @content;
+  }
+}
+
+
+//////////////////////////
+//////     共通     ///////
+/////////////////////////
+
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 12px;
+  font-family: 'Roboto Mono for Powerline',sans-serif;
+}
+
+.title{
+  font-size: 1.8rem;
+  color: $gray;
+  letter-spacing: 5.4px;
+  padding-bottom: 11px;
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    width: 99px;
+    height: 1px;
+    background-color: $gray;
+    top: 8px;
+    margin-left: 22.5px;
+  }
+}

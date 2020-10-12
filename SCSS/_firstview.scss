@@ -1,0 +1,71 @@
+////////////////////////
+////   firstview  /////
+////////////////////////
+
+.first-v{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  align-items: center;
+  @include tab{
+    background-image: url(../IMG/component.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  }
+}
+.first-v__img{
+  height: 100vh;
+  background: url(../IMG/component.png) no-repeat;
+  width: 53.7%;
+  background-size: cover;
+  // backound-color: pink;
+  @include tab{
+    display:none;
+  }
+}
+
+
+.first-v__wrap{
+  text-align: center;
+  margin: 0 auto;
+  @include tab{
+    color:$white;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+}
+.catch-1{
+  font-family:"ヒラギノ明朝 Pro", serif;
+  font-size: 3.8rem;
+  margin-bottom: 48px;
+  font-weight: bold;
+  letter-spacing: 3.8px;
+  @include tab{
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+  @include sp{
+    font-size: 2.3rem;
+    letter-spacing: 2.3px;
+  }
+}
+
+.catch-2{
+  /*windowsにはzapfinoは内臓されていないらしく、
+  Zapfinoが適用されているか確認できませんでした。*/
+  font-family: Zapfino,serif;
+  font-size: 3.8rem;
+  letter-spacing: 3.8px;
+  line-height: 128px;
+  @include tab{
+    font-size: 3.5rem;
+    letter-spacing: 3.5px;
+  }
+  @include sp{
+    font-size: 2.8rem;
+    line-height: 95px;
+    letter-spacing: 2.8px;
+  }
+}
